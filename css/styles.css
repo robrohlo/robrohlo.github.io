@@ -1,27 +1,53 @@
-body {
-  /*background: url(../images/background-image.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;*/
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+html, body {
+  margin: 0px;
 }
 
-.container {
-  /*background: transparent;*/
-}
-
-div.row {
-  background-color: rgba(255, 255, 255);
-  /*border-radius: 30px;*/
-  padding: 10px;
-  /*margin: 10px;*/
+div.container {
+  font-family: Raleway Bold;
+  margin: 0 auto;
+  padding: 3em 3em;
   text-align: center;
+  background: #b8b8b8;
 }
 
-form {
-  background-color: rgba(255, 255, 255);
+div.container a {
+  color: #FFF;
+  text-decoration: none;
+  font: 20px Raleway Bold;
+  margin: 0px 10px;
+  padding: 10px 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
 }
 
-span {
-  margin-bottom: 500px;
+div.highlightTextOut a {
+  color: rgba(255, 255, 255, 0.3); 
 }
+
+div.highlight a:before {
+  position: absolute;
+  color: #476F9A;
+  top: 0px;
+  left: 0px;
+  padding: 10px;
+  overflow: hidden;
+  content: attr(alt);
+  transition: all 0.3s;
+  transform: scale(0.8);
+  opacity: 0;
+  transform: scale(1.2);
+} 
+
+div.highlight a:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+div.highlight a {
+  color: rgba(0, 0, 0, 0.4); 
+}
+
+/*Inspired by a codepen by Evyatar Da*/
